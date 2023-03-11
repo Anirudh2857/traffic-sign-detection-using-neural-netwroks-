@@ -43,6 +43,9 @@ The model was trained for 15 epochs, and achieved an accuracy of 97.2% on the va
 The model's performance was evaluated on the test set using the following metrics:
 
 Accuracy: 0.969
+
 Precision: 0.968
+
 Recall: 0.968
+
 F1 Score: 0.968
