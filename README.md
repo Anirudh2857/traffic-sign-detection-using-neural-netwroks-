@@ -13,17 +13,29 @@ CNN Architecture
 The CNN used in this project consists of the following layers:
 
 Input layer
+
 Convolutional layer with 32 filters
+
 ReLU activation layer
+
 Max pooling layer with a pool size of 2x2
+
 Convolutional layer with 64 filters
+
 ReLU activation layer
+
 Max pooling layer with a pool size of 2x2
+
 Flatten layer
+
 Fully connected layer with 128 units
+
 ReLU activation layer
+
 Dropout layer with a rate of 0.5
+
 Output layer with 43 units (one for each class)
+
 Results
 
 The model was trained for 15 epochs, and achieved an accuracy of 97.2% on the validation set and 96.9% on the test set.
