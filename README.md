@@ -1,51 +1,63 @@
-This project aims to classify German traffic signs using a Convolutional Neural Network (CNN). The project uses the German Traffic Sign Recognition Benchmark dataset, which includes over 50,000 images of 43 different types of traffic signs.
+# Traffic Sign Detection
 
-The code is written in Python 3 and uses the TensorFlow library to create and train the CNN.
+## Overview
+This project is focused on detecting and classifying traffic signs using a deep learning model. The dataset used is the German Traffic Sign Recognition Benchmark (GTSRB). The project involves loading, preprocessing, training, and evaluating a convolutional neural network (CNN) model for traffic sign classification.
 
-**Dataset**
+## Dataset
+The dataset consists of images of German traffic signs, provided in three sets:
+- **Training Set**: Used to train the model.
+- **Validation Set**: Used to fine-tune the model hyperparameters.
+- **Test Set**: Used to evaluate the final model performance.
 
-The dataset used in this project can be found at https://bitbucket.org/jadslim/german-traffic-signs/src/master/test.p. The dataset is provided as a pickle file and contains 12,630 images of 43 different types of traffic signs.
+## Project Structure
+- **Cloning Dataset**: The dataset is cloned from a Bitbucket repository.
+- **Data Loading**: The training, validation, and test datasets are loaded using pickle.
+- **Data Preprocessing**: The dataset is explored and visualized to understand class distributions.
+- **Model Definition**: A CNN model is built using Keras.
+- **Training & Evaluation**: The model is trained using training data and evaluated on validation/test data.
+- **Visualization**: Data distribution and example images from the dataset are displayed.
 
-The dataset is split into training, validation, and testing sets, with 80% of the data used for training, 10% for validation, and 10% for testing.
+## Prerequisites
+Ensure you have the following dependencies installed:
+- Python 3.x
+- NumPy
+- Pandas
+- OpenCV
+- Matplotlib
+- TensorFlow/Keras
 
-**CNN Architecture**
+## Installation
+1. Clone the dataset repository:
+   ```sh
+   git clone https://bitbucket.org/jadslim/german-traffic-signs
+   ```
+2. Install dependencies:
+   ```sh
+   pip install numpy pandas matplotlib keras tensorflow opencv-python
+   ```
+3. Run the Jupyter Notebook or script:
+   ```sh
+   jupyter notebook Traffic_sign_detection.ipynb
+   ```
 
-The CNN used in this project consists of the following layers:
+## Usage
+1. Load and preprocess the dataset.
+2. Train the CNN model on the dataset.
+3. Evaluate model performance using test data.
+4. Visualize predictions and analyze misclassifications.
 
-Input layer
+## Model Architecture
+- **Convolutional Layers**: Extract spatial features from images.
+- **Pooling Layers**: Reduce dimensionality and computational complexity.
+- **Fully Connected Layers**: Classify traffic signs into appropriate categories.
 
-Convolutional layer with 32 filters
+## Results
+The model is evaluated based on accuracy and loss metrics, with visualizations provided for performance analysis.
 
-ReLU activation layer
+## Acknowledgments
+- German Traffic Sign Recognition Benchmark (GTSRB) Dataset
+- TensorFlow/Keras framework for deep learning model development
 
-Max pooling layer with a pool size of 2x2
+## License
+This project is open-source and available for educational and research purposes.
 
-Convolutional layer with 64 filters
-
-ReLU activation layer
-
-Max pooling layer with a pool size of 2x2
-
-Flatten layer
-
-Fully connected layer with 128 units
-
-ReLU activation layer
-
-Dropout layer with a rate of 0.5
-
-Output layer with 43 units (one for each class)
-
-**Results**
-
-The model was trained for 15 epochs, and achieved an accuracy of 97.2% on the validation set and 96.9% on the test set.
-
-The model's performance was evaluated on the test set using the following metrics:
-
-Accuracy: 0.969
-
-Precision: 0.968
-
-Recall: 0.968
-
-F1 Score: 0.968
